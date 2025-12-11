@@ -1,0 +1,148 @@
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --accent:#0b74ff;
+  --muted:#666;
+  --danger:#e04b4b;
+  --success:#2ea44f;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  background:transparent;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
+  padding:18px;
+  margin-bottom:12px;
+}
+
+h1{
+  margin:0;
+  font-size:20px;
+}
+
+.todo-form{
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+
+.todo-form input[type="text"], .todo-form textarea{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e6ef;
+  font-size:14px;
+  outline:none;
+}
+
+.todo-form button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.todo-list{
+  margin-top:8px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.note-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #f0f0f4;
+}
+
+.note-left{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  flex:1;
+}
+
+.note-title{
+  font-weight:600;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.note-title .status{
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:#f1f7ff;
+  color:var(--accent);
+}
+
+.note-content{
+  color:var(--muted);
+  font-size:14px;
+  white-space:pre-wrap;
+}
+
+.note-meta{
+  font-size:12px;
+  color:#9aa0a6;
+  margin-top:8px;
+}
+
+.note-actions{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.icon-btn{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  padding:6px;
+  border-radius:8px;
+}
+
+.icon-btn:hover{background:#f5f7fb}
+.btn-danger{
+  color:var(--danger);
+}
+.btn-success{
+  color:var(--success);
+}
+
+.empty{
+  text-align:center;
+  color:#888;
+  padding:24px;
+}
