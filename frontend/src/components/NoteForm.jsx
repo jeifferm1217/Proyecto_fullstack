@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function NoteForm({ onSubmit, editing, onCancel, disabled }) {
-  const [titulo, setTitulo] = useState("");
-  const [contenido, setContenido] = useState("");
-
-  useEffect(()=>{
-    if (editing){
-      setTitulo(editing.titulo || "");
-      setContenido(editing.contenido || "");
-    } else {
-      setTitulo("");
-      setContenido("");
-    }
-  }, [editing]);
+  const [titulo, setTitulo] = useState(editing?.titulo || "");
+  const [contenido, setContenido] = useState(editing?.contenido || "");
 
   const submit = (e) => {
     e.preventDefault();
